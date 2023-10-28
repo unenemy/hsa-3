@@ -32,6 +32,7 @@ services:
     depends_on:
       - mongo
       - elasticsearch
+      - influxdb
     ports:
       - 3002:3002    
     environment:
