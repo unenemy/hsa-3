@@ -13,16 +13,12 @@ services:
     image: nginx
     restart: always
     volumes:
-    #- ./nginx/nginx.conf:/etc/nginx/nginx.conf
     - ./nginx/templates/default.conf:/etc/nginx/conf.d/default.conf
     ports:
     - "8080:80"
     - "80:80"
     depends_on:
       - blog
-    # environment:
-    # - NGINX_HOST=foobar.com
-    # - NGINX_PORT=80
 
   blog:
     build: ./blog
